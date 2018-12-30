@@ -61,14 +61,14 @@ while (loper < bits_length)
    
    syndrome_result = syndrome(loper, data, check);
    if (syndrome_result == sD & sFlagBlockA == 1 & sFlagBlockB == 1 & sFlagBlockCa == 1 & sFlagBlockD == 0)
-      disp('dddd')
       blockD = data(loper:loper+25);
       sFlagBlockD=1;
       [text1, text2,AF,N,PIN,Hour,Minutes,LocalTimeOffset,Y,M,Day,PI,PTY] = rds_analysis_start_chunks(loper, blockA, blockB, blockC, blockD, text1, text2,AF,N,PIN, ...
                                                                                             Hour,Minutes,LocalTimeOffset,Y,M,Day,PI,PTY);           
       sFlagBlockA=0;
       sFlagBlockB=0;
-      sFlagBlockC=0;
+      sFlagBlockCa=0;
+      sFlagBlockCb=0;
       sFlagBlockD=0;
       loper = loper + 26;
       detected_block_counter=detected_block_counter+1;
