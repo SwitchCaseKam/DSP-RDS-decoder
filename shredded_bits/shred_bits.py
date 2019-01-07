@@ -24,5 +24,5 @@ def shred_bits(input_file_name, chunk_size_start, chunk_size_end, remove_kth_ele
                     output_file.write(inside_chunk_element+"\n")
 
 
-#shred_bits("PR2_log1.txt", 26, 104, 2)
+shred_bits("FM_Radio_RDS1.txt", 26, 104, 4)
 

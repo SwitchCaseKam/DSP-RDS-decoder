@@ -45,7 +45,7 @@ check = [ 1 0 0 0 0 0 0 0 0 0;
 
 
 % Load data
-load rds_bits_samples\PR2_log2_shredded.txt;
+load shredded_bits\PR2_log2_shredded.txt;
 data = PR2_log2_shredded.';
 clear PR2_log2_shredded ; 
 
