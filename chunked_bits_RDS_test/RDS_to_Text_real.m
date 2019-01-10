@@ -57,7 +57,7 @@ check = [ 1 0 0 0 0 0 0 0 0 0;
 data;
 
 len_data = length(data);
-size_of_element = 200;
+size_of_element = 100;
 amount_of_elements = floor(len_data / size_of_element);
 data = data(1:size_of_element*amount_of_elements);
 length(data);
@@ -126,7 +126,7 @@ for i=1 : amount_of_elements
                     blockB = [out_data(index:length_out_data) Out{i+1}(1:(25 - index_next_block))];
                     next_index = 25 - index_next_block;
                     out_data = [out_data Out{i+1}];
-                    index = next_index+1
+                    index = next_index+1;
                     break;
                 end
         else
@@ -147,7 +147,7 @@ for i=1 : amount_of_elements
                     index = next_index+1;
                 else
                     index_next_block = length_out_data - index;
-                    blockC = [out_data(index:length_out_data) Out{i+1}(1:(25 - index_next_block))]
+                    blockC = [out_data(index:length_out_data) Out{i+1}(1:(25 - index_next_block))];
                     next_index = 25 - index_next_block; 
                     out_data = [out_data Out{i+1}];
                     index = next_index+1;
